@@ -1,12 +1,10 @@
 import json
 import socket
-import math
 #rt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #rt.connect(("data.pr4e.org", 80))
 #cmd = "GET http://data.pr4e.org/romeo.txt HTTP/1.0 \n\n".encode()
 #rt.send(cmd)
-gt = math.sin(math.radians(30))
-date = """{
+estate = """{
 "resident1": {"name":"John",
 "age":"32",
 "address": {
@@ -65,21 +63,6 @@ data = {
 "2011-12-17": 475}
 }
 
-def choff_cur(cur):
-    vals = map(int, cur)
-    return f'last current = {sum(vals)}'
+location = json.loads(estate)
+accounts = json.loads(data)
 
-
-def choff_vol(vol, num):
-    pass
-
-#print(choff_cur(["1", "-4", "5", "7"])) 
-
-ft = ['A', 'B', 'C']
-tg = {
-    'A': 0,
-    'B': float('inf'),
-    'C': float('inf')
-    }
-
-now = min(ft, key=tg.get)
